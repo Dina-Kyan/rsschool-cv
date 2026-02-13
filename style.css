@@ -1,0 +1,377 @@
+
+
+:root{
+  --black:#2b2a2c;
+  --gray:#6a696b;
+  --gray-light:#dedede;
+  --white:#fff;
+  --pink-light:#f8f6f7;
+  --pink-accent:#d88fa0;
+  --pink-hover:#c77b8f;
+  --text-dark:#333333;
+  --text-muted:#555555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--pink-light);
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--pink-hover);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+a:hover {
+  color: var(--pink-accent);
+  border-bottom: 2px solid var(--pink-accent);
+}
+
+/*               HEADER                */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-list a {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/*               MAIN CONTENT                */
+
+main {
+  margin-top: 70px;
+}
+
+/*               HOME SECTION               */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-bottom: 120px;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.home-text, .home-image {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.home-image {
+  animation-delay: 0.3s;
+}
+
+.home-title {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--pink-accent);
+  line-height: 1.1;
+}
+
+.home-subtitle {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--text-muted);
+}
+
+.home-image img {
+  border: 1px solid var(--black);
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.home-image img:hover {
+  transform: scale(1.05);
+}
+
+/*               ABOUT SECTION                */
+
+.full-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  padding: 80px 0;
+  scroll-margin-top: 70px;
+}
+
+.full-section:nth-child(even) {
+  background: #fdf5f7;
+}
+
+.section-content {
+  max-width: 700px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.section-content h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--pink-accent);
+}
+
+.section-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/*               EDUCATION SECTION               */
+
+.edu-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.edu-list li {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/*          SKILLS & LANGUAGES SECTION            */
+
+.skills-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-column {
+  flex: 1;
+  min-width: 250px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.skills-column:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.skills-column:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.skills-column h3 {
+  font-size: 28px;
+  color: var(--pink-accent);
+  margin-bottom: 15px;
+}
+
+.skills-column ul, .languages-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-column li, .languages-section li {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+/*          PROJECTS SECTION           */
+
+.project {
+  margin-bottom: 30px;
+}
+
+.project h3 {
+  font-size: 24px;
+  color: var(--pink-accent);
+  margin-bottom: 8px;
+}
+
+.project p {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.project a {
+  color: var(--pink-hover);
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.project a:hover {
+  color: var(--pink-accent);
+  border-bottom: 2px solid var(--pink-accent);
+}
+
+/*          CONTACT SECTION               */
+
+.contact-list {
+  margin-top: 20px;
+}
+
+.contact-list p {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.contact-list a {
+  color: var(--pink-hover);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.contact-list a:hover {
+  color: var(--pink-accent);
+  border-bottom: 2px solid var(--pink-accent);
+}
+
+/*             FOOTER                   */
+
+.footer {
+  background: #f8f6f7;
+  color: var(--text-muted);
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer a {
+  color: var(--pink-hover);
+  font-size: 13px;
+}
+
+.footer a:hover {
+  color: var(--pink-accent);
+  border-bottom: 2px solid var(--pink-accent);
+}
+
+.rs-logo {
+  width: 50px;
+  height: auto;
+}
+
+/* ANIMATIONS & MEDIA QUERIES    */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-list {
+    gap: 20px;
+  }
+
+  .nav-list a {
+    font-size: 12px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .section-content h2 {
+    font-size: 32px;
+  }
+
+  .skills-column h3 {
+    font-size: 24px;
+  }
+
+  .skills-column li,
+  .languages-section li {
+    font-size: 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .rs-logo {
+    width: 40px;
+  }
+}
+
