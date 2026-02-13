@@ -46,6 +46,7 @@ a:hover {
   width: 100%;
   background: var(--white);
   padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid #eee;
   z-index: 1000;
 }
@@ -62,12 +63,14 @@ a:hover {
 .nav {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .nav-list {
   display: flex;
+  justify-content: space-around;
+  width: 100%;
   list-style: none;
-  gap: 40px;
 }
 
 .nav-list a {
@@ -318,6 +321,42 @@ main {
   height: auto;
 }
 
+/*        Burger          */
+
+.menu-toggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+  width: 30px;
+  height: 3px;
+  background: var(--pink-accent);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: var(--pink-accent);
+  transition: transform 0.3s, top 0.3s;
+}
+
+.burger::before {
+  top: -10px; 
+}
+
+.burger::after {
+  top: 10px; 
+}
+
+
 /* ANIMATIONS & MEDIA QUERIES    */
 
 @keyframes fadeUp {
@@ -329,24 +368,16 @@ main {
 
 @media (max-width: 768px) {
 
-  .nav-list {
-    gap: 20px;
-  }
-
-  .nav-list a {
-    font-size: 12px;
-  }
-
-  .hero-content {
+  .home-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-title {
+  .home-title {
     font-size: 36px;
   }
 
-  .hero-image img {
+  .home-image img {
     width: 220px;
     height: 220px;
   }
@@ -373,5 +404,54 @@ main {
   .rs-logo {
     width: 40px;
   }
+
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    flex-direction: column;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-list li {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .menu-toggle:checked + .burger + .nav {
+    max-height: 500px;
+  }
+
+  .menu-toggle:checked + .burger {
+    background: transparent; 
+  }
+
+  .menu-toggle:checked + .burger::before,
+  .menu-toggle:checked + .burger::after {
+    top: 0; 
+  }
+
+  .menu-toggle:checked + .burger::before {
+    transform: rotate(45deg);
+  }
+
+  .menu-toggle:checked + .burger::after {
+    transform: rotate(-45deg);
+  }
+
+
 }
 
