@@ -23,6 +23,7 @@ body {
   background: var(--pink-light);
   color: var(--text-dark);
   scroll-behavior: smooth;
+  cursor: default;
 }
 
 a {
