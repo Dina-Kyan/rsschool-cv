@@ -102,13 +102,13 @@ main {
   flex-wrap: wrap;
 }
 
-.home-text, .home-image {
+.home-text, .image {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 1s ease forwards;
 }
 
-.home-image {
+.image {
   animation-delay: 0.3s;
 }
 
@@ -133,12 +133,12 @@ main {
   animation: bounce 0.4s ease;
 }
 
-.home-subtitle {
+.subtitle {
   font-size: 30px;
   color: var(--text-muted);
 }
 
-.home-intro {
+.intro {
   margin-top: 25px;
   font-size: 16px;
   color: var(--text-muted);
@@ -146,7 +146,7 @@ main {
   line-height: 1.6;
 }
 
-.home-image img {
+.image img {
   border: 1px solid var(--black);
   width: 350px;
   height: 350px;
@@ -155,13 +155,13 @@ main {
   transition: 0.4s;
 }
 
-.home-image img:hover {
+.image img:hover {
   transform: scale(1.05);
 }
 
 /*               ABOUT SECTION                */
 
-.full-section {
+.section-full {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -170,7 +170,7 @@ main {
   scroll-margin-top: 70px;
 }
 
-.full-section:nth-child(even) {
+.section-full:nth-child(even) {
   background: #fdf5f7;
 }
 
@@ -218,7 +218,7 @@ main {
 
 /*          SKILLS & LANGUAGES SECTION            */
 
-.skills-wrapper {
+.skills-container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -226,34 +226,18 @@ main {
   flex-wrap: wrap;
 }
 
-.skills-column {
-  flex: 1;
-  min-width: 250px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.skills-column:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.skills-column:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.skills-column h3 {
+.skills-list h3 {
   font-size: 28px;
   color: var(--pink-accent);
   margin-bottom: 15px;
 }
 
-.skills-column ul, .languages-section ul {
+.skills-list ul, .languages-section ul {
   list-style: none;
   padding: 0;
 }
 
-.skills-column li, .languages-section li {
+.skills-list li, .languages-section li {
   font-size: 16px;
   color: var(--text-muted);
   margin-bottom: 10px;
@@ -408,16 +392,16 @@ main {
     font-size: 36px;
   }
 
-  .home-subtitle{
+  .subtitle{
     font-size: 20px;
   }
 
-  .home-image img {
+  .image img {
     width: 280px;
     height: 280px;
   }
 
-  .home-intro {
+  .intro {
     font-size: 13px;
   }
 }
@@ -429,7 +413,7 @@ main {
     text-align: center;
   }
 
-  .home-image img {
+  .image img {
     width: 220px;
     height: 220px;
   }
@@ -438,11 +422,11 @@ main {
     font-size: 32px;
   }
 
-  .skills-column h3 {
+  .skills-list h3 {
     font-size: 24px;
   }
 
-  .skills-column li,
+  .skills-list li,
   .languages-section li {
     font-size: 16px;
   }
