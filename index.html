@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Diana Ghazaryan CV</title>
 </head>
+
 <body>
   <!--      Header       -->
   <header class="header">
@@ -23,7 +25,7 @@
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills &amp; Languages</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#code example">Code example</a></li>
+          <li><a href="#code">Code example</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -85,7 +87,7 @@
         </p>
       </div>
     </section>
-    <!-- Education -->
+    <!--              Education            -->
     <section id="education" class="section-full">
       <div class="container section-content">
         <h2>Education</h2>
@@ -152,7 +154,7 @@
         </div>
       </div>
     </section>
-    <!--  My projects -->
+    <!--       My projects    -->
     <section id="projects" class="section-full">
       <div class="container section-content">
         <h2>Projects</h2>
@@ -176,6 +178,44 @@
           <a href="https://github.com/Dina-Kyan/watches-store" target="_blank" rel="noopener noreferrer">See on
             GitHub</a>
         </div>
+      </div>
+    </section>
+    <!--   codewars    -->
+    <section id="code" class="section-full">
+      <div class="container section-content">
+        <h2>Code example</h2>
+        <h3>A problem (Kata) from codewars</h3>
+        <p>
+          Given an n x n array, return the array elements arranged from outermost elements to the middle element,
+          traveling clockwise.
+          <a href="https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1/javascript" target="_blank">See on
+            codewars</a>
+        </p>
+        <div class="code-wrapper">
+        <pre><code>
+            function snail(array) {
+              const snailArr = [];
+              while (array.length) {
+                // Add the top row to the result
+                snailArr.push(...array.shift());
+
+                // Collect the last element of each remaining row (right column)
+                for (let row of array) {
+                  row.length &amp;&amp; snailArr.push(row.pop());
+                }
+                
+                // Add the bottom row in reverse order (right-to-left)
+                array.length &amp;&amp; snailArr.push(...array.pop().reverse());
+                
+                // Collect the first element of each remaining row from bottom to top (left column)
+                for (let i = array.length - 1; i &gt;= 0; i--) {
+                  array[i].length &amp;&amp; snailArr.push(array[i].shift());
+                }
+              }
+              return snailArr;
+            }
+            </code></pre>
+          </div>
       </div>
     </section>
     <!--     Contact me     -->
@@ -212,4 +252,5 @@
     </div>
   </footer>
 </body>
+
 </html>
