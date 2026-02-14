@@ -134,20 +134,12 @@ main {
   animation: bounce 0.4s ease;
 }
 
-<<<<<<< HEAD
-.home-subtitle {
-=======
 .subtitle {
->>>>>>> rsschool-cv-html
   font-size: 30px;
   color: var(--text-muted);
 }
 
-<<<<<<< HEAD
-.home-intro {
-=======
 .intro {
->>>>>>> rsschool-cv-html
   margin-top: 25px;
   font-size: 16px;
   color: var(--text-muted);
@@ -155,11 +147,9 @@ main {
   line-height: 1.6;
 }
 
-<<<<<<< HEAD
-.home-image img {
-=======
+
+
 .image img {
->>>>>>> rsschool-cv-html
   border: 1px solid var(--black);
   width: 350px;
   height: 350px;
@@ -405,28 +395,16 @@ main {
     font-size: 36px;
   }
 
-<<<<<<< HEAD
-  .home-subtitle{
-    font-size: 20px;
-  }
-
-  .home-image img {
-=======
   .subtitle{
     font-size: 20px;
   }
 
   .image img {
->>>>>>> rsschool-cv-html
     width: 280px;
     height: 280px;
   }
 
-<<<<<<< HEAD
-  .home-intro {
-=======
   .intro {
->>>>>>> rsschool-cv-html
     font-size: 13px;
   }
 }
@@ -438,11 +416,7 @@ main {
     text-align: center;
   }
 
-<<<<<<< HEAD
-  .home-image img {
-=======
   .image img {
->>>>>>> rsschool-cv-html
     width: 220px;
     height: 220px;
   }
