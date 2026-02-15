@@ -211,6 +211,7 @@ main {
 }
 
 pre {
+  max-width: 700px;
   font-size: 17px;
   margin-top: 10px;
   line-height: 1.5;
