@@ -347,15 +347,21 @@ pre {
 .footer-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
 }
 
+.footer-content > * {
+  margin: 0 20px 0 20px;
+}
+
 .footer a {
   color: var(--pink-hover);
   font-size: 13px;
+  padding-right: 5px;
 }
 
 .footer a:hover {
@@ -403,8 +409,16 @@ pre {
   top: 10px; 
 }
 
+ul {
+  list-style-type: circle; 
+}
 
-/* ANIMATIONS & MEDIA QUERIES    */
+ul li::marker {
+  color: var(--pink-accent);
+}
+
+
+/*      ANIMATIONS & MEDIA QUERIES        */
 
 @keyframes fadeUp {
   to {
@@ -529,6 +543,15 @@ pre {
     transform: rotate(-45deg);
   }
 
+}
 
+@media (max-width: 425px) {
+  .bounce span {
+    font-size: 25px;
+  }
+
+  .subtitle{
+    font-size: 15px;
+  }
 }
 
